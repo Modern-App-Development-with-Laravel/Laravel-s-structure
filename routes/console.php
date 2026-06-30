@@ -6,3 +6,7 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+Artisan::command('greet {name}', function ($name) {
+    $this->comment("Hello, {$name}!");
+})->purpose('Greet a user by name');
